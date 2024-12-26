@@ -76,7 +76,7 @@ jobs:
       - name: Build content
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} run build:content
-          node server.js
+          node preprocess.js
       - name: Build with Next.js
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} next build
